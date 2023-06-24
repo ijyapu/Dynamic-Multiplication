@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+ File: Index.html
+ Assignment: Dynamic Interactive Table
+ Bikash Shrestha, UMass Lowell Computer Science, Bikash_Shrestha@student.uml.edu
+ Copyright (c) 2023 by Bikash Shrestha. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by BS on June 23, 2023, at 7:30 PM.
+ Instructor: Professor Wenjin Zhou
+ Help: w3 Schools/ Stack Overflow / jQuery / Google 
+ Basic Description: This is the part two of fourth assignment where we use jQuery in addition to HTML and CSS to create the interactive multiplication table. 
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multiplication Table</title>
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body id="body">
+  <div id="header" class="container-fluid">
+    <h2>MULTIPLICATION TABLE</h2>
+  </div>
+
+  <!-- Main content -->
+  <div id="maindiv" class="container">
+    <div id="row1" class="row">
+      <!-- Column Form -->
+      <div id="colform" class="col-md-3">
+        <form id="form">
+
+          <!-- Minimum Column Value -->
+          <label>Minimum Column Value:</label><br>
+          <input class="inputs" name="minc" id="minc" type="text" placeholder="Enter a number" /><br>
+          <div class="background-slider">
+            <div id="minCSlider"></div>
+          </div><br>
+
+          <!-- Maximum Column Value -->
+          <label>Maximum Column Value:</label><br>
+          <input class="inputs" name="maxc" id="maxc" type="text" placeholder="Enter a number" /><br>
+          <div class="background-slider">
+            <div id="maxCSlider"></div>
+          </div><br>
+
+          <!-- Minimum Row Value -->
+          <label>Minimum Row Value:</label><br>
+          <input class="inputs" name="minr" id="minr" type="text" placeholder="Enter a number" /><br>
+          <div class="background-slider">
+            <div id="minRSlider"></div>
+          </div><br>
+
+          <!-- Maximum Row Value -->
+          <label>Maximum Row Value:</label><br>
+          <input class="inputs" name="maxr" id="maxr" type="text" placeholder="Enter a number" /><br>
+          <div class="background-slider">
+            <div id="maxRSlider"></div>
+          </div><br>
+
+          <!-- Submit and Reset Buttons -->
+          <button name="submit" class="btn btn-primary mt-2" id="submit" type="submit">Save Table</button>
+          <button name="reset" class="btn btn-primary mt-2" id="clear-btn" type="button"> Reset the Slider</button>
+        </form>
+      </div>
+
+      <!--Table -->
+      <div id="coltable" class="col-md-9">
+        <button class="btn btn-primary mt-2" id="btn-delete">Delete Selected Tabs</button>
+        <ul>
+          <li id="mainli"><a id="maina" href="#maintab"> Current Tab</a></li>
+        </ul>
+        <div id="maintab">
+          <table id="table"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript libraries -->
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- jQuery Validate plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <!-- JavaScript Link -->
+  <script src="js/script.js"></script>
+</body>
+</html>
