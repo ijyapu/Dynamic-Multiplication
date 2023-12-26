@@ -1,1 +1,1 @@
-#PT2: Dynamic Multiplication
+Dynamic Multiplication Table
